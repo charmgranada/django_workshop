@@ -15,4 +15,5 @@ class Post(models.Model):
         self.save()
 
     def __str__(self):
-        return "POST: " + self.title + "by: " + self.author.email
+        return "POST: " + self.title + "by: " + self.author.username
+
