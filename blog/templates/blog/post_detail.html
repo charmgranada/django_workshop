@@ -14,6 +14,9 @@
         <p>update: {{ post.published_date }} | created: {{ post.created_date }}</p>
     {% endif %}
 
+    <p> {{ post.text }} </p>
+
+    <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
 </div>
 
 {% endblock %}
