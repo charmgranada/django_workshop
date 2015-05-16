@@ -16,7 +16,7 @@
 
     </div>
     <div class="post">
-        <p>{{ post.text|linebreaks }}</p>
+        <p>{{ post.text|truncatewords:10|linebreaks }}</p>
     </div>
 {% endfor %}
 {% endblock %}
