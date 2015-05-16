@@ -1,0 +1,19 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+<div class="post">
+    <h1>{{ post.title }}</h1>
+</div>
+<div class="details">
+    <p>by: {{ post.author.username }}</p>
+
+    {% if post.published_date.date == post.created_date.date %}
+        <p>update: {{ post.published_date.time }} | created: {{ post.created_date.date }}</p>
+    {% else %}
+        <p>update: {{ post.published_date }} | created: {{ post.created_date }}</p>
+    {% endif %}
+
+</div>
+
+{% endblock %}
